@@ -365,7 +365,6 @@ address {
 
 .name {
     display: block;
-    width: 300px;
 
     font-size: 12px;
     line-height: 1.3;
@@ -375,9 +374,10 @@ address {
 }
 
 .name span {
-    font-size: 24px;
+    display: block;
+    font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0em;
     text-align: center;
 }
 
@@ -785,7 +785,7 @@ address {
     top: 0;
 }
 
-@media (max-width: 515px) {
+@media (max-width: 400px) {
     .header__info {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -796,7 +796,6 @@ address {
         align-items: center;
 
         padding-left: 0;
-        padding-top: 40px;
     }
 
     .name {
