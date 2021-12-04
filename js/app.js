@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Menu
     let menuBtn = document.querySelector('.header__menu-btn'),
-        menu = document.querySelector('.menu'),
+        menu = document.querySelector('.menu__list'),
         menuLine = document.querySelector('.header__menu-line');
 
     menuBtn.addEventListener('click', function () {
