@@ -459,8 +459,6 @@ address {
     align-items: center;
 
     color: #000000;
-
-    padding: 20px 0;
 }
 
 .menu__list {
@@ -474,6 +472,8 @@ address {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+
+    padding: 23px 0;
 }
 
 .menu__item + .menu__item {
@@ -535,6 +535,10 @@ address {
     cursor: pointer;
 }
 
+.menu__item-language {
+    display: none;
+}
+
 .header__menu-btn {
     display: none;
 }
@@ -542,6 +546,9 @@ address {
 @media (max-width: 860px) {
     .header {
         margin: 0 -15px;
+
+        position: relative;
+        z-index: 10;
     }
 
     .header__info {
@@ -558,7 +565,10 @@ address {
 
     .menu {
         width: 100%;
+    }
 
+    .menu__list {
+        min-width: 100%;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -567,11 +577,15 @@ address {
         -ms-flex-align: center;
         align-items: center;
 
+        padding: 23px 0;
+
         background: #f2f8ff;
 
         position: absolute;
+        top: 100%;
         left: 0;
-        z-index: 99;
+        right: 0;
+        z-index: 9;
 
         -webkit-transform: translateY(-610px);
         -ms-transform: translateY(-610px);
@@ -582,29 +596,22 @@ address {
         transition: all 0.5s linear;
     }
 
-    .menu__list {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-
-        margin-bottom: 65px;
-    }
-
     .menu__item {
         font-size: 22px;
         font-weight: 700;
         line-height: 1.6;
     }
 
-    .language {
-        -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-        order: -1;
+    .menu__item-address {
+        margin-top: 65px;
+    }
 
+    .header__language {
+        display: none;
+    }
+
+    .menu__item-language {
+        display: block;
         margin-bottom: 65px;
     }
 
@@ -711,7 +718,7 @@ address {
     }
 }
 
-.menu.active {
+.menu__list.active {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
