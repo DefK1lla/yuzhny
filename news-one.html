@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- SVG -->
+    <svg display="none">
+        <symbol id="vk" viewBox="0 0 22 22">
+            <g>
+                <path
+                    d="M18.678 0.919922H3.31797C1.99317 0.919922 0.917969 1.99512 0.917969 3.31992V18.6799C0.917969 20.0047 1.99317 21.0799 3.31797 21.0799H18.678C20.0028 21.0799 21.078 20.0047 21.078 18.6799V3.31992C21.078 1.99512 20.0028 0.919922 18.678 0.919922ZM17.1036 14.8399L15.3132 14.8351C15.3132 14.8351 15.2748 14.8399 15.2124 14.8399C15.0684 14.8399 14.7708 14.8015 14.4204 14.5615C13.7916 14.1247 13.1916 13.0399 12.7164 13.0399C12.6828 13.0399 12.654 13.0447 12.6252 13.0543C12.2124 13.1839 12.0876 13.5967 12.0876 14.1007C12.0876 14.2783 11.9628 14.3599 11.6268 14.3599H10.7004C9.66357 14.3599 8.66037 14.3359 7.53237 13.1023C5.87157 11.2831 4.31637 8.04792 4.31637 8.04792C4.31637 8.04792 4.22997 7.86072 4.32117 7.75032C4.40757 7.64952 4.60917 7.63992 4.68597 7.63992C4.70517 7.63992 4.71477 7.63992 4.71477 7.63992H6.63477C6.63477 7.63992 6.81237 7.67352 6.94197 7.76952C7.05237 7.85112 7.10997 7.99992 7.10997 7.99992C7.10997 7.99992 7.43637 8.63352 7.84437 9.34872C8.53077 10.5295 8.90037 10.9231 9.16437 10.9231C9.20757 10.9231 9.25077 10.9135 9.29397 10.8895C9.68757 10.6735 9.57237 8.92632 9.57237 8.92632C9.57237 8.92632 9.57717 8.29272 9.37077 8.01432C9.21237 7.79352 8.90997 7.73112 8.77557 7.71192C8.66997 7.69752 8.84277 7.44792 9.07317 7.33272C9.37077 7.18872 9.86517 7.15992 10.4604 7.15992H10.7484C11.31 7.16952 11.3244 7.22712 11.5452 7.27992C12.2076 7.43832 11.982 8.05752 11.982 9.54072C11.982 10.0159 11.8956 10.6831 12.2364 10.9087C12.2604 10.9231 12.294 10.9327 12.3372 10.9327C12.558 10.9327 13.0332 10.6495 13.7916 9.36792C14.214 8.63832 14.5404 7.91352 14.5404 7.91352C14.5404 7.91352 14.6124 7.78392 14.7228 7.71672C14.8284 7.65432 14.8284 7.65432 14.9676 7.65432H14.982C15.1356 7.65432 16.662 7.63992 16.998 7.63992H17.0364C17.358 7.63992 17.6508 7.64472 17.7036 7.84152C17.7804 8.13912 17.4684 8.67192 16.6476 9.77592C15.294 11.5855 15.1404 11.4511 16.2636 12.4975C17.3388 13.4959 17.5596 13.9807 17.598 14.0431C18.0444 14.7823 17.1036 14.8399 17.1036 14.8399Z" />
+            </g>
+        </symbol>
+
+        <symbol id="fb" viewBox="0 0 22 22">
+            <g>
+                <path
+                    d="M18.6819 0.919922H3.32187C1.99707 0.919922 0.921875 1.99512 0.921875 3.31992V18.6799C0.921875 20.0047 1.99707 21.0799 3.32187 21.0799H18.6819C20.0067 21.0799 21.0819 20.0047 21.0819 18.6799V3.31992C21.0819 1.99512 20.0067 0.919922 18.6819 0.919922ZM16.7619 8.11992H15.8019C14.7747 8.11992 14.3619 8.35992 14.3619 9.07992V10.5199H16.7619L16.2819 12.9199H14.3619V20.1199H11.9619V12.9199H10.0419V10.5199H11.9619V9.07992C11.9619 7.15992 12.9219 5.71992 14.8419 5.71992C16.2339 5.71992 16.7619 6.19992 16.7619 6.19992V8.11992Z" />
+            </g>
+        </symbol>
+
+        <symbol id="more" viewBox="0 0 20 20">
+            <g>
+                <path
+                    d="M2 1.46378e-06C0.894999 1.46378e-06 0 0.895002 0 2V15C0 15.552 0.448 16 1 16C1.552 16 2 15.552 2 15V2H15C15.552 2 16 1.552 16 1C16 0.448001 15.552 0 15 0L2 1.46378e-06ZM6 4C4.895 4 4 4.895 4 6V18C4 19.105 4.895 20 6 20H18C19.105 20 20 19.105 20 18V6C20 4.895 19.105 4 18 4H6ZM15 6.00196C15.768 6.00196 16.5361 6.29391 17.1211 6.87891C17.6881 7.44491 18 8.199 18 9C18 9.801 17.6881 10.5541 17.1211 11.1211L15.8789 12.3652C15.6839 12.5602 15.4279 12.6582 15.1719 12.6582C14.9159 12.6582 14.6598 12.5602 14.4648 12.3652C14.0738 11.9742 14.0738 11.3422 14.4648 10.9512L15.707 9.70703C15.896 9.51703 16 9.267 16 9C16 8.733 15.896 8.48197 15.707 8.29297C15.316 7.90197 14.684 7.90297 14.293 8.29297L13.0215 9.56445C12.6305 9.95545 11.9984 9.95545 11.6074 9.56445C11.2164 9.17345 11.2164 8.54139 11.6074 8.15039L12.8789 6.87891C13.4639 6.29391 14.232 6.00195 15 6.00195L15 6.00196ZM12.373 10.627C12.6288 10.627 12.8846 10.7244 13.0801 10.9199C13.4711 11.3109 13.4711 11.943 13.0801 12.334L12.332 13.0801C12.137 13.2751 11.883 13.373 11.627 13.373C11.371 13.373 11.1149 13.2751 10.9199 13.0801C10.5289 12.6891 10.5289 12.059 10.9199 11.668L11.666 10.9199C11.8615 10.7244 12.1173 10.627 12.373 10.627V10.627ZM8.84961 11.3223C9.10536 11.3223 9.36114 11.4197 9.55664 11.6152C9.94764 12.0062 9.94764 12.6383 9.55664 13.0293L8.29297 14.293C8.10397 14.482 8 14.733 8 15C8 15.267 8.10397 15.518 8.29297 15.707C8.67197 16.086 9.32803 16.085 9.70703 15.707L10.9707 14.4434C11.3617 14.0524 11.9938 14.0524 12.3848 14.4434C12.7758 14.8344 12.7748 15.4674 12.3848 15.8574L11.1211 17.1211C10.5551 17.6881 9.801 18 9 18C8.199 18 7.44491 17.6881 6.87891 17.1211C6.31291 16.5551 6 15.801 6 15C6 14.199 6.3129 13.4459 6.87891 12.8789L8.14258 11.6152C8.33808 11.4197 8.59386 11.3223 8.84961 11.3223V11.3223Z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <div class="wrapper">
+        <header class="header" data-aos="fade-down">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__info">
+                        <a class="name" href="/yuzhny/index.html">Миграционный центр <span>«Полюстровский»</span></a>
+
+                        <a class="header__eyesight" href="/">
+                            Версия <br>
+                            для слабовидящих
+                        </a>
+
+                        <address class="header__address">
+                            г. Санкт-Петербург, Кубинская 77, миграционный центр "Полюстровский”
+                        </address>
+
+                        <div class="header__phone">
+                            <a class="header__tel" href="tel:+79315350000">+7 (931) 535-00-00</a>
+                            <a class="header__call" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+                        </div>
+
+                        <a class="header__btn btn btn--light popup-link" href="#ask-question">Задать вопрос</a>
+
+                        <a class="header__profile" href="#">
+                            <img class="avatar" src="img/avatar.png">
+                        </a>
+                    </div>
+
+                    <div class="header__menu">
+                        <button class="header__menu-btn">
+                            <span class="header__menu-line">menu</span>
+                        </button>
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__item-language">
+                                    <div class="language menu__language">
+                                        <select class="language__select" name="lang">
+                                            <option class="language__option" value="ru" selected>RU</option>
+                                        </select>
+                                    </div>
+                                </li>
+
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/yuzhny/news.html">Новости</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/yuzhny/services.html">Услуги</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/yuzhny/information.html">Информация</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/yuzhny/faq.html">FAQ</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/yuzhny/partners.html">Партнеры</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/yuzhny/contacts.html">Контакты</a>
+                                </li>
+
+                                <li class="menu__item-address">
+                                    <address class="header__menu-address">
+                                        г. Санкт-Петербург, Кубинская 77, миграционный центр "Полюстровский”
+                                    </address>
+                                </li>
+
+                                <li class="menu__item-profile">
+                                    <a class="header__menu-profile" href="#">
+                                        <img class="avatar" src="img/avatar.png">
+                                    </a>
+                                </li>
+                            </ul>
+
+
+
+                            <div class="header__language language">
+                                <select class="language__select" name="lang">
+                                    <option class="language__option" value="ru" selected>RU</option>
+                                </select>
+                            </div>
+                        </nav>
+                    </div> <!-- /.header__menu -->
+                </div> <!-- /.header__inner -->
+            </div> <!-- /.container -->
+        </header>
+
+
+        <main class="main">
+            <div class="breadcrumbs" data-aos="fade-left">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Главная </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__current">Новости</span>
+                        </li>
+                    </ul>
+                </div> <!-- /.container -->
+            </div> <!-- /.breadcrumbs -->
+
+            <div class="news-page">
+                <section class="news-one">
+                    <div class="container">
+                        <div class="news-one__inner">
+                            <a class="news-one__back" href="#">Вернуться назад</a>
+
+                            <div class="news-one__added">
+                                <div class="news-one__date">15 ноября 2021</div>
+                                <div class="news-one__dot">
+                                    &#183;
+                                </div>
+                                <div class="news-one__time">11:34</div>
+                            </div>
+
+                            <div class="news-one__post">
+                                <h3 class="news-one__title">
+                                    В Петербурге открыли крупнейший миграционный центр
+                                </h3>
+
+                                <img class="news-one__img" src="img/news/img.jpg" alt="image">
+
+                                <div class="news-one__text">
+                                    <p>
+                                        В Московском районе Петербурга в пятницу, 12 ноября, состоялось открытие
+                                        миграционного центра «Южный». Его площадь превышает 2,2 тыс. м2, что делает
+                                        новый
+                                        центр крупнейшим в городе.
+                                    </p>
+
+                                    <p>
+                                        Под одной крышей размещены все организации, необходимые для оформления
+                                        и получения
+                                        трудового патента: подразделение ФГУП «Паспортно-визовый сервис» МВД, отдел
+                                        по вопросам трудовой миграции и медицинский центр, рассказали в пресс-службе
+                                        Смольного.
+                                    </p>
+
+                                    <p>
+                                        «В рамках работы центра иностранные граждане смогут пройти комплексный экзамен,
+                                        медицинское освидетельствование, оформить полис дополнительного медицинского
+                                        страхования, а также оплатить необходимые налоги», — сказано в отчёте
+                                        об открытии.
+                                    </p>
+
+                                    <p>
+                                        Пропускная способность нового миграционного центра составит до 700 человек
+                                        в день.
+                                    </p>
+
+                                    <p>
+                                        Ранее на этой неделе «ДП» писал, что депутаты одобрили рост платежей по патенту
+                                        для
+                                        трудовых мигрантов. Теперь авансовый платёж составляет 4,2 тыс. рублей.
+                                    </p>
+
+                                    <p>
+                                        В октябре в правительстве предсказали рекордный за четверть века рост миграции.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="news-one__repost">
+                                Поделиться
+                                <a class="news-one__btn" href="#">
+                                    <svg class="news-one__icon">
+                                        <use xlink:href="#vk"></use>
+                                    </svg>
+                                </a>
+
+                                <a class="news-one__btn" href="#">
+                                    <svg class="news-one__icon">
+                                        <use xlink:href="#fb"></use>
+                                    </svg>
+                                </a>
+
+                                <a class="news-one__btn" href="#">
+                                    <svg class="news-one__icon">
+                                        <use xlink:href="#more"></use>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="news-one__more">
+                                <div class="news-one__more-head">
+                                    <div class="news-one__actual">
+                                        Актуальные новости
+                                    </div>
+
+                                    <a class="news-one__see-all" href="#">
+                                        Смотреть все новости
+                                    </a>
+                                </div>
+                                <div class="news-one__items">
+                                    <a class="news-one__item" href="#">
+                                        Трудовым мигрантам упростят процесс получения СНИЛС с 2022 года.
+                                    </a>
+
+                                    <a class="news-one__item" href="#">
+                                        Санкт‑-Петербург присоединяется к Большому этнографическому диктанту
+                                    </a>
+
+                                    <a class="news-one__item" href="#">
+                                        МВД подтвердило планы депортировать нелегализовавшихся мигрантов после 30 …
+                                    </a>
+
+                                    <a class="news-one__item" href="#">
+                                        Минтруд расширит перечень профессий для упрощенного получения гражданства
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner" data-aos="fade-up">
+                    <div class="footer__name name">Миграционный центр <span>«Полюстровский»</span></div>
+
+                    <div class="footer__menu">
+                        <ul class="footer__list">
+                            <li class="footer__menu-item">
+                                <a class="footer__link" href="#">Новости</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__link" href="#">Услуги</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__link" href="#">Информация</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__link" href="#">FAQ</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__link" href="#">Партнеры</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__contacts">
+                        <a class="footer__phone" href="tel:+79315350000">+7 (931) 535-00-00</a>
+                        <address class="footer__address">196240, Санкт-Петербург Кубинская 77, миграционный центр
+                            "Полюстровский”
+                        </address>
+                    </div>
+                </div> <!-- /.footer__inner -->
+            </div> <!-- /.container -->
+
+            <div class="copy">
+                <div class="container">
+                    <div class="copy__politic">
+                        Ваши персональные данные обрабатываются на сайте в целях его функционирования в рамках <br>
+                        <a href="#">Политики в отношении обработки персональных данных</a>. Если Вы не согласны,
+                        пожалуйста, покиньте
+                        сайт.
+                    </div>
+
+                    <p>© 2020 Миграционный центр «Полюстровский»</p>
+                </div>
+            </div>
+        </footer>
+    </div> <!-- /.wrapper -->
+
+
+    <!-- Question -->
+    <div class="popup" id="ask-question">
+        <div class="popup__body popup-close">
+            <div class="popup__content">
+                <button class="popup__close popup-close">
+                    <span class="popup__close-line">close popup</span>
+                </button>
+
+                <h2 class="popup__title title">Задать вопрос</h2>
+                <p class="popup__text">
+                    Уважаемые клиенты, <br>
+                    Вы можете получить консультацию посредством заполнения онлайн-формы:
+                </p>
+
+                <div class="question">
+                    <form class="form form--col" id="question-form" name="question" action="#" method="post">
+                        <div class="form__group form__group--col">
+                            <label class="form__label" for="full-name">ФИО:</label>
+                            <input class="form__input" id="full-name" name="full-name" type="text"
+                                placeholder="ФИО иностранного граждыанина">
+                        </div>
+
+                        <div class="form__group form__group--col">
+                            <label class="form__label" for="phone">Телефон:</label>
+                            <input class="form__input" id="phone" name="phone" type="tel" placeholder="Телефон">
+                        </div>
+
+                        <div class="form__group form__group--col">
+                            <label class="form__label" for="email">E-mail:</label>
+                            <input class="form__input" id="email" type="email" name="email" placeholder="E-mail">
+                        </div>
+
+                        <div class="form__group form__group--col">
+                            <div class="form__title">Выберите желаемый вид связи:</div>
+                            <div class="options">
+                                <div class="options__item">
+                                    <input class="options__input" id="contact-phone" checked type="radio"
+                                        name="contact-way" value="phone">
+                                    <label class="options__label" for="contact-phone">Телефон</label>
+                                </div>
+
+                                <div class="options__item">
+                                    <input class="options__input" id="contact-email" type="radio" name="contact-way"
+                                        value="email">
+                                    <label class="options__label" for="contact-email">E-mail</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__group form__group--col">
+                            <label class="form__label" for="question">Вопрос:</label>
+                            <textarea class="form__input" id="question" name="question" placeholder="Вопрос"></textarea>
+                        </div>
+
+                        <div class="form__captcha">
+                            <img src="img/captcha.jpg" alt="каптча">
+                        </div>
+
+                        <div class="form__submit">
+                            <button class="form__btn btn" type="submit">Отправить</button>
+                        </div>
+
+                        <p class="form__notice">
+                            Нажимая на кнопку я даю согласие на обработку персональных данных
+                        </p>
+                    </form>
+
+                    <p class="popup__text">
+                        В рамках профилактических мер по недопущению распространения новой коронавирусной инфекции
+                        (Covid-19), сокращения контактов между сотрудниками для ограничения воздушно-капельного и
+                        контактного механизмов передачи инфекции на предприятиях (в организациях) Миграционный центр
+                        организует возможность <a class="popup__link" href="#">подачи документов дистанционным
+                            способом.</a>
+                    </p>
+                </div> <!-- /.question -->
+            </div> <!-- /.popup__content -->
+        </div> <!-- /.popup__body -->
+    </div> <!-- /.popup -->
+
+    <!-- Scripts -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c63ed892-7ef6-450d-bc1b-7d118b42db4e&lang=ru_RU">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
